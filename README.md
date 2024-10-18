@@ -8,12 +8,19 @@
 ## Table of Contents
 
 - [Installation](#installation)
+- [Testing](#testing)
 - [License](#license)
 
 ## Installation
 
 ```console
-pip install my-calc
+pip install hatch my-calc
+```
+
+## Testing
+
+```console
+hatch run python -m unittest discover -s tests
 ```
 
 ## License
