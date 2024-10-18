@@ -20,7 +20,7 @@ pip install hatch my-calc
 ## Testing
 
 ```console
-hatch run python -m unittest discover -s tests
+hatch run python3 -m unittest discover -s tests
 ```
 
 ## License
