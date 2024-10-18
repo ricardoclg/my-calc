@@ -15,12 +15,16 @@
 
 ```console
 pip install hatch my-calc
+hatch env create py311
+hatch env create py312
 ```
 
 ## Testing
 
 ```console
-hatch run python -m unittest discover -s tests
+hatch run python3 -m unittest discover -s tests
+hatch run py311:python -m unittest discover -s tests
+hatch run py312:python -m unittest discover -s tests
 ```
 
 ## License

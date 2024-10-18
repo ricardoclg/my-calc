@@ -13,29 +13,53 @@ keywords = []
 authors = [
   { name = "João Antonio Ferreira", email = "joao.parana@gmail.com" },
 ]
+maintainers = [
+  { name = "João Antonio Ferreira", email = "joao.parana@gmail.com" },
+  { name = "Ricardo Correia Lima Goçalves", email = "ricardo.lima_ext@cepel.br" },
+]
 classifiers = [
   "Development Status :: 4 - Beta",
   "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
 dependencies = []
 
 [project.urls]
-Documentation = "https://github.com/João Antonio Ferreira/my-calc#readme"
-Issues = "https://github.com/João Antonio Ferreira/my-calc/issues"
-Source = "https://github.com/João Antonio Ferreira/my-calc"
+Documentation = "https://github.com/joao-parana/my-calc#readme"
+Issues = "https://github.com/joao-parana/my-calc/issues"
+Source = "https://github.com/joao-parana/my-calc"
 
 [tool.hatch.version]
 path = "src/my_calc/__about__.py"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.envs.default]
+python = "3.11"
+dependencies = [
+    # "unittest"
+]
+
+[tool.hatch.envs.py311]
+python = "3.11"
+dependencies = [
+    # "unittest"
+]
+
+[tool.hatch.envs.py312]
+python = "3.12"
+dependencies = [
+    # "unittest"
+]
 
 [tool.hatch.envs.types]
 extra-dependencies = [
   "mypy>=1.0.0",
 ]
-
-# [tool.hatch.envs.default]
-# dependencies = ["unittest"]
 
 [tool.hatch.envs.types.scripts]
 check = "mypy --install-types --non-interactive {args:src/my_calc tests}"
