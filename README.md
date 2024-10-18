@@ -14,6 +14,7 @@
 ## Installation
 
 ```console
+cp git_hooks/pre-commit .git/hooks/
 pip install hatch my-calc
 hatch env create py311
 hatch env create py312

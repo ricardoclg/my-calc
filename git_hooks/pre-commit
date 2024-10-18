@@ -1,0 +1,11 @@
+#!/bin/sh
+# Script de pre-commit para rodar testes com unittest
+echo "Executando testes com unittest antes do commit"
+hatch run python3 -m unittest discover -s tests
+
+# Verifica o status do último comando executado
+if [ $? -ne 0 ]; then
+	  echo "Os testes falharam. Commit abortado."
+	    exit 1
+fi
+
