@@ -1,5 +1,8 @@
 from behave import given, when, then
 
+# from my_calc.calculator import Calculator
+from my_calc import Calculator
+
 
 @given("que eu tenho os números {num1:d} e {num2:d}")
 def step_given_numeros(context, num1, num2):
@@ -9,7 +12,8 @@ def step_given_numeros(context, num1, num2):
 
 @when("eu somo esses números")
 def step_when_somo(context):
-    context.resultado = context.num1 + context.num2
+    context.resultado = Calculator.add(context.num1, context.num2)
+    # context.resultado = context.num1 + context.num2
 
 
 @when("eu subtraio esses números")
